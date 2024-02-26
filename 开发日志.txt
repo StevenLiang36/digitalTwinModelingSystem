@@ -7,3 +7,11 @@
 2. 还需要做一个注册界面。打算在登录界面password下做一行小字：在文字中跳转到注册界面
 3. 做一个展示界面（登陆后进入的地方）
 4. 登录界面上方的导航栏
+
+2024/2/26
+1. 未解决：运行打开主界面时终端还是会告知有部分路径文件找不到404（有文件中的路径是错误的，需要修改）
+[23/Feb/2024 17:55:18] "GET /static/images/banner.jpg HTTP/1.1" 404 1810
+[23/Feb/2024 17:55:18] "GET /static/systemWeb_static/css/images/overlay.png HTTP/1.1" 404 1876
+[23/Feb/2024 17:55:18] "GET /static/systemWeb_static/css/images/arrow.svg HTTP/1.1" 404 1870
+2. 登录界面上方导航栏样式问题。不知道导航栏的css代码有哪些（main.css中）
+3. 完成了注册界面以及注册成功界面

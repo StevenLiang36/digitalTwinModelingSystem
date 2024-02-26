@@ -27,7 +27,8 @@ def toHomePageAndLogin(request):
 
 def userAdd(request):
     if request.method == "GET":
-        return render(request,'signUpPage.html')
+        # return render(request,'signUpPage.html')
+        return render(request, 'signUp.html')
     #获取用户提交数据
     username = request.POST.get("username")
     password = request.POST.get("password")
@@ -35,10 +36,14 @@ def userAdd(request):
     #添加到数据库
     UserInfo.objects.create(username=username, password=password)
     #添加后跳转到指定页面
-    return redirect("/accCreated/")
+    # return redirect("/accCreated/")
+    return redirect("/accountCreated/")
 
-def toAccCreatedPage(requeast):
-    return render(requeast,"accCreated.html")
+# def toAccCreatedPage(requeast):
+#     return render(requeast,"accCreated.html")
+
+def accountCreated(request):
+    return render(request, "accountCreated.html")
 
 def toMainPage(request):
     return render(request,'mainPage.html')
@@ -63,8 +68,8 @@ def rightSidebar(request):
 def noSidebar(request):
     return render(request,"no-sidebar.html")
 
-def login2(request):
-    return render(request,"login2.html")
+def signUp(request):
+    return render(request,"signUp.html")
 
 class LoginForm(forms.Form):
     username = forms.CharField(

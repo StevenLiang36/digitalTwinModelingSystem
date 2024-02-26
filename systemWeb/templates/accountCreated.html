@@ -3,48 +3,20 @@
 
 <HTML>
 <HEAD>
-    <TITLE>Login</TITLE>
+    <TITLE>Account Created</TITLE>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <META NAME="Generator" CONTENT="EditPlus">
     <META NAME="Author" CONTENT="">
     <META NAME="Keywords" CONTENT="">
     <META NAME="Description" CONTENT="">
 
-    <link rel="stylesheet" href="{% static 'systemWeb_static/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'systemWeb_static/css/accountCreated.css' %}">
 </HEAD>
 
 <BODY>
-{#    <header id="header">#}
-{#        <h1 id="logo"><a href="/index">Digital Twin</a></h1>#}
-{#        <nav id="nav">#}
-{#            <ul>#}
-{#                <li><a href="/index">Home</a></li>#}
-{#                <li>#}
-{#                    <a href="#">Layouts</a>#}
-{#                    <ul>#}
-{#                        <li><a href="/left-sidebar">Left Sidebar</a></li>#}
-{#                        <li><a href="/right-sidebar">Right Sidebar</a></li>#}
-{#                        <li><a href="/no-sidebar">No Sidebar</a></li>#}
-{#                    </ul>#}
-{#                </li>#}
-{#                <li><a href="/login" class="button primary">Login</a></li>#}
-{#            </ul>#}
-{#        </nav>#}
-{#    </header>#}
-
-    <div id="login">
-        <h1>Login</h1>
-        <form method="post">
-            {% csrf_token %}
-            <label>Username</label>
-            {{ form.username }}
-            <span style="color: #fff">{{ form.username.errors.0 }}</span>
-            <label>Password</label>
-            {{ form.password }}
-            <span style="color: #fff">{{ form.password.errors.0 }}</span>
-            <p id="textSignUp">No account? Sign up <a href="/signUp">here</a></p>
-            <button class="but" type="submit">登录</button>
-        </form>
+    <div id="accountCreated">
+        <h1>Account Created Successfully!</h1>
+        <a href="/login"><button class="but" type="button">sign up now!</button></a>
     </div>
 
     <canvas id="sakura"></canvas>

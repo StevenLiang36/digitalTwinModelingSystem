@@ -26,10 +26,10 @@ urlpatterns = [
     # System Web
     path('homePage/',views.toHomePageAndLogin),
     path('signUpPage/',views.userAdd),
-    path('accCreated/',views.toAccCreatedPage),
+    # path('accCreated/',views.toAccCreatedPage),
+    path('accountCreated/',views.accountCreated),
     path('main/',views.toMainPage),
     path('contactUs/',views.teamInfoList),
-
     path('adminLogin/',views.adminLogin),
 
     path('index/',views.index), # 整合主页
@@ -37,7 +37,7 @@ urlpatterns = [
     path('right-sidebar/',views.rightSidebar),
     path('no-sidebar/',views.noSidebar),
     path('login/',views.login),
-
+    path('signUp/',views.userAdd),
 
     # User Management System
     path('userList/',user.userInfoList),
