@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Left Sidebar - Digital Twin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+{#		<link rel="stylesheet" href="assets/css/main.css" />#}
+{#		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>#}
+        <link rel="stylesheet" href="{% static 'systemWeb_static/css/main.css' %}">
+        <noscript><link rel="stylesheet" href="{% static 'systemWeb_static/css/noscript.css' %}" /></noscript>
+
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+<canvas id="canvas"></canvas>
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="/index">Digital Twin</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/index">Home</a></li>
+							<li>
+								<a href="#">Layouts</a>
+								<ul>
+									<li><a href="/left-sidebar">Left Sidebar</a></li>
+									<li><a href="/right-sidebar">Right Sidebar</a></li>
+									<li><a href="/no-sidebar">No Sidebar</a></li>
+								</ul>
+							</li>
+							<li><a href="/login" class="button primary">Login</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Left Sidebar</h2>
+							<p>项目的介绍</p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>项目介绍</h3>
+													<p>随着互联网、大数据和人工智能等新一代信息技术的快速发展，以“智能制
+                                        造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用各
+                                        种技术实现物理世界与信息化的虚拟世界的交互与融合，加速工厂智能化。
+                                        传统方法通过人工收集数据、整数规划和模拟仿真等技术促进生产线平衡，
+                                        采用先进的模型和算法进行分析决策，从可视化的角度呈现、控制和优化整个生
+                                        产活动。</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="#" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+										<hr />
+										<section>
+											<a href="#" class="image fit"><img src="{% static 'systemWeb_static/images/pic06.jpg' %}" alt="" /></a>
+											<h3>项目简介</h3>
+										<p>随着互联网、大数据和人工智能等新一代信息技术的快速发展，以“智能制
+                                        造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用各
+                                        种技术实现物理世界与信息化的虚拟世界的交互与融合，加速工厂智能化。
+                                        传统方法通过人工收集数据、整数规划和模拟仿真等技术促进生产线平衡，
+                                        采用先进的模型和算法进行分析决策，从可视化的角度呈现、控制和优化整个生
+                                        产活动。</p>
+											<footer>
+												<ul class="actions">
+													<li>第四已引主导。</li>
+											<li>智能制造发展。</li>
+											<li>传统方法的关数据。</li>
+											<li>项目介绍可视化系统。</li>
+											<li>生产活动产活动。</li>
+										</ul>
+											</footer>
+										</section>
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										<a href="#" class="image fit"><img src="{% static 'systemWeb_static/images/pic05.jpg' %}" alt="" /></a>
+										<h3>项目简介</h3>
+										<p>随着互联网、大数据和人工智能等新一代信息技术的快速发展，以“智能制
+                                        造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用各
+                                        种技术实现
+                                        采用先进的模型和算法进行分析决策，从可视化的角度呈现、控制和优化整个生
+                                        产活动。</p>
+										<h3>建模环境展示</h3>
+											<p>建模环境展示：
+                                      使用WebGL 3D绘图协议，结合JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
+                                      OpenGL ES的JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
+                                      Ope标准化为不同平台的用户提供了支持，同时能够最大程度地利用高性能的3D渲染硬件，实现数字孪生模型的实时渲染和可视化。
+                                      这种技术选择有助于实现虚拟场景的快速建模和高效的可视化展示。</p>
+										<ul>
+											<li>第四次工业革命：新一代信息技术（互联网、大数据、人工智能）的迅速发展已引发第四次工业革命，以"智能制造"为主导。</li>
+											<li>智能制造核心：智能制造的核心目标是将物理世界与信息化的虚拟世界相互融合，以加速工厂的智能化发展。</li>
+											<li>传统方法的局限性：传统方法依赖人工数据收集、整数规划和模拟仿真等技术，虽然提高了生产效率，但不能准确模拟物理实体属性和多维度的生产线相关数据。</li>
+											<li>项目介绍：本项目采用双目计算机视觉技术和数字孪生建模技术，基于深度学习算法构建了一个可视化系统。</li>
+											<li>生产活动的可视化控制和优化：通过可视化系统，可以从可视化的角度呈现、控制和优化整个生产活动。</li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: lzy</li>					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'systemWeb_static/js/jquery.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/browser.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/util.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/main.js' %}"></script>
+			<script src="{% static 'systemWeb_static/js/digital.pet.js' %}"></script>
+	</body>
+</html>

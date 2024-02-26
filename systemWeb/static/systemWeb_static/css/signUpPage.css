@@ -1,0 +1,162 @@
+body {
+    background-color: black;
+}
+
+/* 文字 */
+
+p {
+    color: #fff;
+}
+
+/* 导航栏 */
+.navigatorBox {
+    height: 100px;
+    border-bottom: 1px solid #fff;;
+}
+
+.a1 {
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.a11 {
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    left: 20px;
+}
+
+.a12 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 220px;
+}
+
+.a13 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+}
+
+.a14 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 120px;
+}
+
+#navWelcome {
+    font-size:x-large;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+/* 主页面 */
+form {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainBox {
+    height: 466px;
+    background-color: rgb(73, 73, 73);
+    text-align: center;
+}
+
+.loginBox {
+    height: 350px;
+    width: 300px;
+}
+
+.akeys {
+    height: 75px;
+    width: 300px;
+}
+
+.bkeys {
+    height: 200px;
+    width: 300px;
+}
+
+.ckeys {
+    height: 75px;
+    width: 300px;
+} 
+
+#textLogin {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    text-align: center;
+    font-size: x-large;
+}
+
+#info {
+    height: 175px;
+    width: 200;
+}
+
+#Username {
+    margin-right: 65px;
+}
+
+#Password {
+    margin-right: 65px;
+}
+
+/* 选项框 */
+.inKey {
+    width: 200px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    color: #fff;
+    background-color:rgb(73, 73, 73);
+    border:1px solid #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+/* 选项触摸属性 */
+.inKey:focus {
+    color: #333;
+    background-color: #fff;
+}
+
+.inKey:hover {
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+}
+
+/* 帮助栏 */
+.helpBox {
+    height: 50px;
+    border-top: 1px solid #fff;;
+}
+
+#knowMore {
+    text-align: center;
+}
+
+/* 链接（按钮）的颜色 */
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+/* 按钮按下的下划线效果 */
+}
+a:hover{
+text-decoration: underline;
+}

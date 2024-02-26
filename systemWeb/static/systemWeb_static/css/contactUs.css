@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+}
+
+/* 文字 */
+
+p {
+    color: #fff;
+}
+
+/* 导航栏 */
+.navigatorBox {
+    height: 100px;
+    border-bottom: 1px solid #fff;;
+}
+
+.a1 {
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.a11 {
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    left: 20px;
+}
+
+.a12 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 220px;
+}
+
+.a13 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+}
+
+.a14 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 120px;
+}
+
+#navWelcome {
+    font-size:x-large;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+/* 主页面 */
+.mainBox {
+    height: 466px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.mainBox > div {
+    background-color: rgb(73, 73, 73);
+    margin: 5px;
+    padding: 5px;
+    width: 230px;
+}
+
+.a2 {
+    font-size: 25px;
+}
+
+/* 帮助栏 */
+.helpBox {
+    height: 50px;
+    border-top: 1px solid #fff;;
+}
+
+#knowMore {
+    text-align: center;
+}
+
+/* 链接（按钮）的颜色 */
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+/* 按钮按下的下划线效果 */
+}
+a:hover{
+text-decoration: underline;
+}
