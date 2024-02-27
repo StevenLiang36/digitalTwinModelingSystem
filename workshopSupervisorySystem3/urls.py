@@ -24,12 +24,12 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
 
     # System Web
-    path('homePage/',views.toHomePageAndLogin),
-    path('signUpPage/',views.userAdd),
+    # path('homePage/',views.toHomePageAndLogin),
+    # path('signUpPage/',views.userAdd),
     # path('accCreated/',views.toAccCreatedPage),
     path('accountCreated/',views.accountCreated),
-    path('main/',views.toMainPage),
-    path('contactUs/',views.teamInfoList),
+    # path('main/',views.toMainPage),
+    # path('contactUs/',views.teamInfoList),
     path('adminLogin/',views.adminLogin),
 
     path('index/',views.index), # 整合主页

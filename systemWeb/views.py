@@ -11,33 +11,33 @@ from systemWeb.utils.encrypt import md5
 from UMS import models
 
 
-def toHomePageAndLogin(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+# def toHomePageAndLogin(request):
+#     if request.method == "POST":
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
+#
+#         if UserInfo.objects.filter(username = username):
+#             if UserInfo.objects.filter(username = username)[0].password == password:
+#                 return redirect('/main/')
+#             else:
+#                 return HttpResponse('password incorrect')
+#         else:
+#             return HttpResponse('user not exist')
+#     return render(request, "homePage.html")
 
-        if UserInfo.objects.filter(username = username):
-            if UserInfo.objects.filter(username = username)[0].password == password:
-                return redirect('/main/')
-            else:
-                return HttpResponse('password incorrect')
-        else:
-            return HttpResponse('user not exist')
-    return render(request, "homePage.html")
-
-def userAdd(request):
-    if request.method == "GET":
-        # return render(request,'signUpPage.html')
-        return render(request, 'signUp.html')
-    #获取用户提交数据
-    username = request.POST.get("username")
-    password = request.POST.get("password")
-
-    #添加到数据库
-    UserInfo.objects.create(username=username, password=password)
-    #添加后跳转到指定页面
-    # return redirect("/accCreated/")
-    return redirect("/accountCreated/")
+# def userAdd(request):
+#     if request.method == "GET":
+#         # return render(request,'signUpPage.html')
+#         return render(request, 'signUp.html')
+#     #获取用户提交数据
+#     username = request.POST.get("username")
+#     password = request.POST.get("password")
+#
+#     #添加到数据库
+#     UserInfo.objects.create(username=username, password=password)
+#     #添加后跳转到指定页面
+#     # return redirect("/accCreated/")
+#     return redirect("/accountCreated/")
 
 # def toAccCreatedPage(requeast):
 #     return render(requeast,"accCreated.html")
@@ -45,15 +45,15 @@ def userAdd(request):
 def accountCreated(request):
     return render(request, "accountCreated.html")
 
-def toMainPage(request):
-    return render(request,'mainPage.html')
+# def toMainPage(request):
+#     return render(request,'mainPage.html')
 
-def teamInfoList(request):
-    data_list = MyTeam.objects.all()
-    return render(request,'contactUs.html',{'data_list':data_list})
+# def teamInfoList(request):
+#     data_list = MyTeam.objects.all()
+#     return render(request,'contactUs.html',{'data_list':data_list})
 
-def toContactPage(request):
-    return render(request, "contactUs.html")
+# def toContactPage(request):
+#     return render(request, "contactUs.html")
 
 # 廖子尧版本
 def index(request):
@@ -130,6 +130,25 @@ def adminLogin(request):
             return render(request, 'adminLogin.html', {'form': form})
 
     return render(request, 'adminLogin.html', {'form': form})
+
+def userAdd(request):
+    if request.method == "GET":
+        form = LoginForm
+        return render(request, 'signUp.html')
+
+    form = LoginForm(data=request.POST)
+    if form.is_valid():
+        username = form.cleaned_data["username"]
+        password = form.cleaned_data['password']
+
+        if username != None and password != None:
+            UserInfo.objects.create(username=username, password=password)
+            return redirect("/accountCreated/")
+        else:
+            form.add_error("password", "用户名或密码不能为空")
+            return render(request, 'signUp.html', {'form': form})
+
+    return render(request, 'signUp.html', {'form': form})
 
 # try
 # wpq版本
