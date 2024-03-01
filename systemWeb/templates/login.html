@@ -10,31 +10,31 @@
     <META NAME="Keywords" CONTENT="">
     <META NAME="Description" CONTENT="">
 
+    <link rel="stylesheet" href="{% static 'systemWeb_static/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'systemWeb_static/css/login.css' %}">
-{#    <link rel="stylesheet" href="{% static 'systemWeb_static/css/main.css' %}">#}
 </HEAD>
 
 <BODY>
-{#    <header id="header">#}
-{#        <h1 id="logo"><a href="/index">Digital Twin</a></h1>#}
-{#        <nav id="nav">#}
-{#            <ul>#}
-{#                <li><a href="/index">Home</a></li>#}
-{#                <li>#}
-{#                    <a href="#">Layouts</a>#}
-{#                    <ul>#}
-{#                        <li><a href="/left-sidebar">Left Sidebar</a></li>#}
-{#                        <li><a href="/right-sidebar">Right Sidebar</a></li>#}
-{#                        <li><a href="/no-sidebar">No Sidebar</a></li>#}
-{#                    </ul>#}
-{#                </li>#}
-{#                <li><a href="/login" class="button primary">Login</a></li>#}
-{#            </ul>#}
-{#        </nav>#}
-{#    </header>#}
+    <header id="header">
+        <h1 id="logo"><a href="/index">Digital Twin</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="#">Layouts</a>
+                    <ul>
+                        <li><a href="/left-sidebar">Left Sidebar</a></li>
+                        <li><a href="/right-sidebar">Right Sidebar</a></li>
+                        <li><a href="/no-sidebar">No Sidebar</a></li>
+                    </ul>
+                </li>
+                <li><a href="/login" class="button primary">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div id="login">
-        <h1>Login</h1>
+        <h1 class="login">Login</h1>
         <form method="post">
             {% csrf_token %}
             <label>Username</label>
@@ -43,7 +43,7 @@
             <label>Password</label>
             {{ form.password }}
             <span style="color: #fff">{{ form.password.errors.0 }}</span>
-            <p id="textSignUp">No account? Sign up <a href="/signUp">here</a></p>
+            <p id="textSignUp">No account? Sign up <a class='signUpHere' href="/signUp">here</a></p>
             <button class="but" type="submit">登录</button>
         </form>
     </div>
