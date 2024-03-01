@@ -123,15 +123,11 @@ body{
 /*    margin: 0.67em 0;*/
 /*}*/
 
-/*h1{*/
-/*    font-size: 2em;*/
-/*    margin: 0.67em 0;*/
-/*}*/
-
-.login {
+h1{
     font-size: 2em;
     margin: 0.67em 0;
 }
+
 
 /*input{*/
 /*    width: 300px;*/
@@ -175,7 +171,7 @@ label {
     letter-spacing: 1px;
 }
 
-.signUpHere {
+a {
     margin: 0;
     color: #fff;
     text-shadow:0 0 10px;
@@ -189,3 +185,4 @@ label {
     text-shadow:0 0 10px;
     letter-spacing: 1px;
 }
+
