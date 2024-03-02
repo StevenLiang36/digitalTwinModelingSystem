@@ -21,29 +21,21 @@ from UMS.views import user,developer,admin
 from systemWeb import views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-
-    # System Web
-    # path('homePage/',views.toHomePageAndLogin),
-    # path('signUpPage/',views.userAdd),
-    # path('accCreated/',views.toAccCreatedPage),
-    path('accountCreated/',views.accountCreated),
-    # path('main/',views.toMainPage),
-    # path('contactUs/',views.teamInfoList),
-    path('adminLogin/',views.adminLogin),
-
     path('index/',views.index), # 整合主页
     path('left-sidebar/',views.leftSidebar),
     path('right-sidebar/',views.rightSidebar),
     path('no-sidebar/',views.noSidebar),
     path('login/',views.login),
     path('signUp/',views.userAdd),
+    path('accountCreated/',views.accountCreated),
 
     # User Management System
     path('userList/',user.userInfoList),
     path('userInfo/<int:nid>/edit/',user.userEdit),
     path('userInfoDelete/',user.userDel),
     path('userListAdd/',user.userListAdd),
+
+    path('adminLogin/',views.adminLogin),
 
     path('developerList/',developer.developerList),
     path('adminList/',admin.adminList),
