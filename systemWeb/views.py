@@ -8,7 +8,7 @@ from django import forms
 from UMS import models
 
 def index(request):
-    return render(request, "index.html") # 整合主页
+    return render(request, "index.html")
 
 def leftSidebar(request):
     return render(request,"left-sidebar.html")

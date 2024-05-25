@@ -1,5 +1,5 @@
 """
-URL configuration for workshopSupervisorySystem3 project.
+URL configuration for digitalTwinModelingSystem project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -21,7 +21,7 @@ from UMS.views import user,developer,admin
 from systemWeb import views
 
 urlpatterns = [
-    path('index/',views.index), # 整合主页
+    path('index/',views.index),
     path('left-sidebar/',views.leftSidebar),
     path('right-sidebar/',views.rightSidebar),
     path('no-sidebar/',views.noSidebar),
