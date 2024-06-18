@@ -3,6 +3,8 @@ from django.shortcuts import render, HttpResponse, redirect
 from UMS import models
 
 from django.core.paginator import Paginator
+
+
 # from django.contrib.auth.decorators import login_required
 
 # @login_required(login_url='/login/')
@@ -13,7 +15,7 @@ def userInfoList(request):
     data_dict = {}
     search_data = request.GET.get('srh', "")
 
-    page = int(request.GET.get('page',1))
+    page = int(request.GET.get('page', 1))
     page_size = 10
 
     if search_data:
@@ -32,10 +34,11 @@ def userInfoList(request):
 
     return render(request, 'userList.html', context)
 
+
 def userEdit(request, nid):
     if request.method == "GET":
         row_object = UserInfo.objects.filter(id=nid).first()
-        return render(request,'userListEdit.html',{"row_object": row_object})
+        return render(request, 'userListEdit.html', {"row_object": row_object})
 
     username = request.POST.get("username")
     password = request.POST.get("password")
@@ -45,10 +48,12 @@ def userEdit(request, nid):
 
     return redirect("/userList/")
 
+
 def userDel(request):
     nid = request.GET.get('nid')
     UserInfo.objects.filter(id=nid).delete()
     return redirect("/userList/")
+
 
 # @login_required(login_url='/login/')
 def userListAdd(request):

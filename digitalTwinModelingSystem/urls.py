@@ -17,27 +17,31 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from UMS.views import user,developer,admin
+from UMS.views import user, developer, admin
 from systemWeb import views
+from Pre import views as pv
 
 urlpatterns = [
-    path('index/',views.index),
-    path('left-sidebar/',views.leftSidebar),
-    path('right-sidebar/',views.rightSidebar),
-    path('no-sidebar/',views.noSidebar),
-    path('login/',views.login),
-    path('signUp/',views.userAdd),
-    path('accountCreated/',views.accountCreated),
+    path('index/', views.index),
+    path('', views.index),
+    path('left-sidebar/', views.leftSidebar),
+    path('right-sidebar/', views.rightSidebar),
+    path('no-sidebar/', views.noSidebar),
+    path('login/', views.login),
+    path('signUp/', views.userAdd),
+    path('accountCreated/', views.accountCreated),
 
     # User Management System
-    path('userList/',user.userInfoList),
-    path('userInfo/<int:nid>/edit/',user.userEdit),
-    path('userInfoDelete/',user.userDel),
-    path('userListAdd/',user.userListAdd),
+    path('userList/', user.userInfoList),
+    path('userInfo/<int:nid>/edit/', user.userEdit),
+    path('userInfoDelete/', user.userDel),
+    path('userListAdd/', user.userListAdd),
 
-    path('adminLogin/',views.adminLogin),
+    path('adminLogin/', views.adminLogin),
 
-    path('developerList/',developer.developerList),
-    path('adminList/',admin.adminList),
+    path('developerList/', developer.developerList),
+    path('adminList/', admin.adminList),
 
+    # Webgl Models Pages
+    path('showModels/', pv.show_model),
 ]

@@ -2,17 +2,18 @@ from django.shortcuts import render
 from UMS import models
 
 from django.core.paginator import Paginator
+
+
 # from django.contrib.auth.decorators import login_required
 
 # @login_required(login_url='/login/')
 def adminList(request):
-
     data_dict = {}
 
     search_data = request.GET.get('srh', "")
 
     # 分页
-    page = int(request.GET.get('page',1))
+    page = int(request.GET.get('page', 1))
     page_size = 10
 
     if search_data:

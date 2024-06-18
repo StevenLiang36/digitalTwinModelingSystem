@@ -7,35 +7,43 @@ from UMS.models import UserInfo, MyTeam
 from django import forms
 from UMS import models
 
+
 def index(request):
     return render(request, "index.html")
 
+
 def leftSidebar(request):
-    return render(request,"left-sidebar.html")
+    return render(request, "left-sidebar.html")
+
 
 def rightSidebar(request):
-    return render(request,"right-sidebar.html")
+    return render(request, "right-sidebar.html")
+
 
 def noSidebar(request):
-    return render(request,"no-sidebar.html")
+    return render(request, "no-sidebar.html")
+
 
 def signUp(request):
-    return render(request,"signUp.html")
+    return render(request, "signUp.html")
+
 
 def accountCreated(request):
     return render(request, "accountCreated.html")
 
+
 class LoginForm(forms.Form):
     username = forms.CharField(
         label='用户名',
-        widget=forms.TextInput(attrs={"class": "form-control",'autocomplete': 'off'}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'autocomplete': 'off'}),
         required=True
     )
     password = forms.CharField(
         label='密码',
-        widget=forms.PasswordInput(attrs={"class": "form-control",'autocomplete': 'off'}),
+        widget=forms.PasswordInput(attrs={"class": "form-control", 'autocomplete': 'off'}),
         required=True
     )
+
 
 def login(request):
     if request.method == "GET":
@@ -52,7 +60,7 @@ def login(request):
 
         if user and password == user.password:
             # 密码正确：
-            request.session["userInfo"] = {'id': user.id, 'name': user.username} # cookie
+            request.session["userInfo"] = {'id': user.id, 'name': user.username}  # cookie
             return redirect('/index/')
         else:
             # 密码错误：
@@ -60,6 +68,7 @@ def login(request):
             return render(request, 'login.html', {'form': form})
 
     return render(request, 'login.html', {'form': form})
+
 
 def adminLogin(request):
     if request.method == "GET":
@@ -76,7 +85,7 @@ def adminLogin(request):
 
         if user and password == user.password:
             # 密码正确：
-            request.session["userInfo"] = {'id': user.id, 'name': user.username} # cookie
+            request.session["userInfo"] = {'id': user.id, 'name': user.username}  # cookie
             return redirect('/userList/')
         else:
             # 密码错误：
@@ -85,9 +94,10 @@ def adminLogin(request):
 
     return render(request, 'adminLogin.html', {'form': form})
 
+
 def userAdd(request):
     if request.method == "GET":
-        form = LoginForm
+        # form = LoginForm
         return render(request, 'signUp.html')
 
     form = LoginForm(data=request.POST)
@@ -95,7 +105,7 @@ def userAdd(request):
         username = form.cleaned_data["username"]
         password = form.cleaned_data['password']
 
-        if username != None and password != None:
+        if username is not None and password is not None:
             UserInfo.objects.create(username=username, password=password)
             return redirect("/accountCreated/")
         else:

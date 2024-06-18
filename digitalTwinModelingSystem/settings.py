@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'systemWeb.apps.SystemwebConfig',
-    'UMS.apps.UmsConfig'
+    'UMS.apps.UmsConfig',
+    "Pre.apps.PreConfig"
 ]
 
 MIDDLEWARE = [

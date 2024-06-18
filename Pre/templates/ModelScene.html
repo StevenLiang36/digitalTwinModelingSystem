@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {#    <script src="{% static 'plugins/three/build/three.module.js' %}" type="module"></script>#}
+    {#    <script src="{% static 'plugins/three/examples/jsm/loaders/PLYLoader.js' %}" type="module"></script>#}
+</head>
+<body>
+
+<script type="importmap">
+    {
+        "imports":{
+            "three": "{% static 'plugins/three/build/three.module.js' %}",
+            "three/loaders/": "{% static 'plugins/three/examples/jsm/loaders/' %}"
+
+        }
+    }
+</script>
+
+<script type="module">
+    import * as THREE from 'three';
+    import {PLYLoader} from 'three/loaders/PLYLoader.js'
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const cameraTarget = new THREE.Vector3(0, -0.1, 0)
+
+    scene.background = new THREE.Color(0x72645b)
+    // scene.fog = new THREE.Fog(0x72645b, 2, 15)
+
+
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    // const cube = new THREE.Mesh( geometry, material );
+    // scene.add( cube );
+
+    const loader = new PLYLoader();
+
+
+    loader.load('{% static 'models/ascend-mesh.ply' %}',
+
+        function (geometry) {
+
+            // geometry.computeVertexNormals();
+            // var material = new THREE.MeshPhongMaterial({
+            //     color: 0xffffff,
+            //     specular: 0x111111,
+            //     shininess: 200,
+            //     vertexColors: THREE.VertexColors
+            // });
+            // const mesh = new THREE.Mesh(geometry, material);
+            //
+            // mesh.position.x = -0.2;
+            // mesh.position.y = -0.52;
+            // mesh.position.z = -0.0;
+            // mesh.scale.multiplyScalar(0.0006);
+
+            const material = new THREE.PointsMaterial({size: 0.01, vertexColors: true});
+            const object = new THREE.Points(geometry, material);
+
+            scene.add(object);
+            // objects.push(mesh);
+
+        }
+    )
+    ;
+
+    camera.position.z = -10;
+    camera.position.x = 10;
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // cube.rotation.x += 0.01;
+        // cube.rotation.y += 0.01;
+
+        camera.lookAt(cameraTarget)
+
+        renderer.render(scene, camera);
+        // render()
+    }
+
+    function render() {
+        const timer = Date.now() * 0.0005;
+
+        camera.position.x = Math.sin(timer) * 25;
+        camera.position.y = Math.cos(timer) * 25;
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+</script>
+</body>
+</html>
