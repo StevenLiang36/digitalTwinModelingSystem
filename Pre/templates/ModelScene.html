@@ -6,14 +6,19 @@
     <title>Title</title>
     {#    <script src="{% static 'plugins/three/build/three.module.js' %}" type="module"></script>#}
     {#    <script src="{% static 'plugins/three/examples/jsm/loaders/PLYLoader.js' %}" type="module"></script>#}
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1-dist/css/bootstrap.css' %}">
 
+</head>
+<body class="container-fluid">
+
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-3.4.1-dist/js/bootstrap.js' %}"></script>
 <script type="importmap">
     {
         "imports":{
             "three": "{% static 'plugins/three/build/three.module.js' %}",
-            "three/loaders/": "{% static 'plugins/three/examples/jsm/loaders/' %}"
+            "three/loaders/": "{% static 'plugins/three/examples/jsm/loaders/' %}",
+            "three/controls/": "{% static 'plugins/three/examples/jsm/controls/' %}"
 
         }
     }
@@ -21,81 +26,77 @@
 
 <script type="module">
     import * as THREE from 'three';
-    import {PLYLoader} from 'three/loaders/PLYLoader.js'
+    import {PLYLoader} from 'three/loaders/PLYLoader.js';
+    import {OrbitControls} from 'three/controls/OrbitControls.js';
 
+    // 创建场景、相机和渲染器
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const cameraTarget = new THREE.Vector3(0, -0.1, 0)
-
-    scene.background = new THREE.Color(0x72645b)
-    // scene.fog = new THREE.Fog(0x72645b, 2, 15)
-
-
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
-    // const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    // const cube = new THREE.Mesh( geometry, material );
-    // scene.add( cube );
+    // 创建场景并设置背景和雾
+    scene.background = new THREE.Color(0xa0a0a0);
+    {#scene.fog = new THREE.Fog(0xa0a0a0, 4, 20);#}
 
+    // 加载PLY模型
     const loader = new PLYLoader();
+    let main_object;
+    loader.load('{{ project.threedmodel.model_file.url }}', function (geometry) {
+        const material = new THREE.PointsMaterial({size: 0.01, vertexColors: true});
+        main_object = new THREE.Points(geometry, material);
+        scene.add(main_object);
 
+        // 计算包围盒
+        geometry.computeBoundingBox();
+        const boundingBox = geometry.boundingBox;
 
-    loader.load('{% static 'models/ascend-mesh.ply' %}',
+        // 计算模型的尺寸和中心
+        const size = new THREE.Vector3();
+        boundingBox.getSize(size);
+        const center = new THREE.Vector3();
+        boundingBox.getCenter(center);
 
-        function (geometry) {
+        // 调整相机位置和朝向
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const fov = camera.fov * (Math.PI / 180);
+        let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
 
-            // geometry.computeVertexNormals();
-            // var material = new THREE.MeshPhongMaterial({
-            //     color: 0xffffff,
-            //     specular: 0x111111,
-            //     shininess: 200,
-            //     vertexColors: THREE.VertexColors
-            // });
-            // const mesh = new THREE.Mesh(geometry, material);
-            //
-            // mesh.position.x = -0.2;
-            // mesh.position.y = -0.52;
-            // mesh.position.z = -0.0;
-            // mesh.scale.multiplyScalar(0.0006);
+        // 增加一些距离使模型完全显示
+        cameraZ *= 1.5;
 
-            const material = new THREE.PointsMaterial({size: 0.01, vertexColors: true});
-            const object = new THREE.Points(geometry, material);
+        camera.position.set(center.x, center.y, cameraZ);
+        camera.lookAt(center);
 
-            scene.add(object);
-            // objects.push(mesh);
+        // 更新控制器的目标
+        controls.target.set(center.x, center.y, center.z);
+    });
 
-        }
-    )
-    ;
+    // 创建OrbitControls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // 使动画循环时阻尼或自转，必须在动画循环里调用.update()
+    controls.dampingFactor = 0.25;
+    controls.screenSpacePanning = false;
+    controls.minDistance = 5;
+    controls.maxDistance = 50;
 
-    camera.position.z = -10;
-    camera.position.x = 10;
+    // 添加坐标轴辅助器
+    {#const axesHelper = new THREE.AxesHelper(20);#}
+    {#scene.add(axesHelper);#}
 
     function animate() {
         requestAnimationFrame(animate);
 
-        // cube.rotation.x += 0.01;
-        // cube.rotation.y += 0.01;
+        // 更新控制器
+        controls.update();
 
-        camera.lookAt(cameraTarget)
-
-        renderer.render(scene, camera);
-        // render()
-    }
-
-    function render() {
-        const timer = Date.now() * 0.0005;
-
-        camera.position.x = Math.sin(timer) * 25;
-        camera.position.y = Math.cos(timer) * 25;
-
+        // 渲染场景
         renderer.render(scene, camera);
     }
 
     animate();
+
 </script>
 </body>
 </html>

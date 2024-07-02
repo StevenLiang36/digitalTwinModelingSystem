@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Model Here</title>
+</head>
+<body>
+<h1>
+    This is model add page.
+</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Project Model</h2>
+    {{ threed_model_form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

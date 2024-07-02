@@ -15,20 +15,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 
-from UMS.views import user, developer, admin
+from UMS.views import user, developer, admin_view
 from systemWeb import views
 from Pre import views as pv
 
 urlpatterns = [
-    path('index/', views.index),
+    path('admin/', admin.site.urls),
+    path('index/', views.index, name='index'),
     path('', views.index),
     path('left-sidebar/', views.leftSidebar),
     path('right-sidebar/', views.rightSidebar),
     path('no-sidebar/', views.noSidebar),
-    path('login/', views.login),
-    path('signUp/', views.userAdd),
+    path('login/', views.login_view, name='login'),
+    path('signUp/', views.userAdd, name='signUp'),
+    path('logout/', views.logout_view, name='logout'),
     path('accountCreated/', views.accountCreated),
 
     # User Management System
@@ -40,8 +44,24 @@ urlpatterns = [
     path('adminLogin/', views.adminLogin),
 
     path('developerList/', developer.developerList),
-    path('adminList/', admin.adminList),
+    path('adminList/', admin_view.adminList),
 
-    # Webgl Models Pages
-    path('showModels/', pv.show_model),
+    # Project Management
+    path('projectList/', pv.project_list, name='project_list'),
+    path('project/<int:pid>/', pv.project_detail, name='project_detail'),
+    path('projectAdd/', pv.add_project_and_images, name='add_project_and_images'),
+    path('projectDelete/<int:pid>/', pv.project_delete, name='project_delete'),
+    path('addProjectImages/<int:pid>/', pv.add_project_images, name='add_project_images'),
+    path('deleteImage/<int:iid>/', pv.image_delete, name='delete_image'),
+
+    # Model Management
+    path('showModels/<int:pid>/', pv.show_model, name='show_model'),
+    path('modelAdd/<int:pid>/', pv.model_add, name='model_add'),
+
+    # Case
+    path('case/', pv.case_list, name='case_list'),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

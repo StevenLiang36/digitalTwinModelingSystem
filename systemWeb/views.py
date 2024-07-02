@@ -6,6 +6,8 @@ from django.shortcuts import render, HttpResponse, redirect
 from UMS.models import UserInfo, MyTeam
 from django import forms
 from UMS import models
+from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate, logout
 
 
 def index(request):
@@ -45,7 +47,7 @@ class LoginForm(forms.Form):
     )
 
 
-def login(request):
+def login_view(request):
     if request.method == "GET":
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
@@ -56,12 +58,17 @@ def login(request):
         password = form.cleaned_data['password']
 
         # user = models.UserInfo.objects.filter(username=username).first()
-        user = models.UserInfo.objects.filter(username=username).first()
+        # user = models.UserInfo.objects.filter(username=username).first()
 
-        if user and password == user.password:
-            # 密码正确：
-            request.session["userInfo"] = {'id': user.id, 'name': user.username}  # cookie
-            return redirect('/index/')
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('project_list')
+        # if user and password == user.password:
+        # 密码正确：
+        # request.session["userInfo"] = {'id': user.id, 'name': user.username}  # cookie
+        # return redirect('/index/')
         else:
             # 密码错误：
             form.add_error("password", "用户名或密码错误")
@@ -100,16 +107,45 @@ def userAdd(request):
         # form = LoginForm
         return render(request, 'signUp.html')
 
-    form = LoginForm(data=request.POST)
-    if form.is_valid():
-        username = form.cleaned_data["username"]
-        password = form.cleaned_data['password']
+    # form = LoginForm(request.POST)
+    #
+    # if form.is_valid():
+    #     username = form.cleaned_data["username"]
+    #     password = form.cleaned_data['password']
+    #
+    #     if username is not None and password is not None:
+    #         UserInfo.objects.create(username=username, password=password)
+    #         return redirect("/accountCreated/")
+    #     else:
+    #         form.add_error("password", "用户名或密码不能为空")
+    #         return render(request, 'signUp.html', {'form': form})
 
-        if username is not None and password is not None:
-            UserInfo.objects.create(username=username, password=password)
-            return redirect("/accountCreated/")
-        else:
-            form.add_error("password", "用户名或密码不能为空")
-            return render(request, 'signUp.html', {'form': form})
+    # return render(request, 'signUp.html', {'form': form})
 
-    return render(request, 'signUp.html', {'form': form})
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    password2 = request.POST.get('password2')
+
+    user_exist = User.objects.filter(username=username).exists()
+    if user_exist:
+        context = {
+            'msg': 'User already exists!',
+        }
+        return render(request, 'signUp.html', context=context)
+
+    if not (password == password2):
+        context = {
+            'msg': 'Passwords do not match!',
+        }
+        return render(request, 'signUp.html', context=context)
+
+    user = User.objects.create_user(username=username, password=password)
+
+    login(request, user)
+
+    return redirect('project_list')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')

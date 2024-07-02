@@ -27,14 +27,18 @@
     <h1>Sign Up Here!</h1>
     <form method="post">
         {% csrf_token %}
-        <label>Username</label>
-        <input name="username" autocomplete="off">
+        <label for="username">Username</label>
+        <input name="username" id="username" autocomplete="off">
         {#            {{ form.username }}#}
         {#            <span style="color: #fff">{{ form.username.errors.0 }}</span>#}
-        <label>Password</label>
-        <input name="password" autocomplete="off">
+        <label for="password1">Password</label>
+        <input type="password" name="password" id="password1" autocomplete="off">
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" name="password2" id="password2">
         {#            {{ form.password }}#}
         <span style="color: #fff">{{ form.password.errors.0 }}</span>
+        <span style="color: #fff">{{ msg }}</span>
         <button class="but" type="submit">注册</button>
     </form>
 </div>
