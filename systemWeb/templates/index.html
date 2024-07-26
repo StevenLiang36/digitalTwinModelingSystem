@@ -1,214 +1,473 @@
 {% load static %}
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <title>Digital Twin</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    {#		<link rel="stylesheet" href="assets/css/main.css" />#}
-    {#		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>#}
-    <link rel="stylesheet" href="{% static 'systemWeb_static/css/main.css' %}">
-    <noscript>
-        <link rel="stylesheet" href="{% static 'systemWeb_static/css/noscript.css' %}"/>
-    </noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="../static/systemWeb_static/css/animate.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/style.css">
+    <title>3D-Reconstruction</title>
 </head>
-<body class="is-preload landing">
-<div id="page-wrapper">
 
-    <!-- Header -->
-    <header id="header">
-        <h1 id="logo"><a href="/index">Digital Twin</a></h1>
-        <nav id="nav">
-            <ul>
-                <li><a href="/index">Home</a></li>
-                <li><a href="{% url 'case_list' %}">Cases</a></li>
-                <li>
-                    <a href="#">Layout</a>
-                    <ul>
-                        <li><a href="/left-sidebar">Left Sidebar</a></li>
-                        <li><a href="/right-sidebar">Right Sidebar</a></li>
-                        <li><a href="/no-sidebar">No Sidebar</a></li>
-                    </ul>
-                </li>
-                <li><a href="/login" class="button primary">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
 
-    <!-- Banner -->
-    <section id="banner">
-        <div class="content">
-            <header>
-                <h2>大数据和人工智能</h2>
-                <p>第四次工业革命已经到来，而“智能<br/>
-                    理世界与信息化的虚拟世界的交互与融合</p>
-            </header>
-            <span class="image"><img src="{% static 'systemWeb_static/images/pic01.jpg' %}" alt=""/></span>
+<div id="cursor"></div>
 
+<div class="backdrop"></div>
 
-
-        </div>
-        <a href="#one" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- One -->
-    <section id="one" class="spotlight style1 bottom">
-        <span class="image fit main"><img src="{% static 'systemWeb_static/images/pic02.jpg' %}" alt=""/></span>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <header>
-                            <h2>第四次工业革命</h2>
-                            <p>新一代信息技术（互联网、大数据、人工智能）的迅速发展已引发第四次工业革命</p>
-                        </header>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <p>使用WebGL 3D绘图协议，结合JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
-                            OpenGL ES的JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
-                            Ope标准化为不同平台的用户提供了支持，同时能够最大程度地利用高性能的3D渲染硬件，实现数字孪生模型的实时渲染和可视化。
-                            这种技术选择有助于实现虚拟场景的快速建模和高效的可视化展示。</p>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <p>使用WebGL 3D绘图协议，结合JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
-                            OpenGL ES的JavaScript和OpenGL ES2.0，提供3D硬件加速，增强数据可视化效果和实时渲染效率。
-                            Ope标准化为不同平台的用户提供了支持，：新一代信息技术（互联网、大数据、人同时能够最大程度地利用高性能的3D渲染硬件，实现数字孪生模型的实时渲染和可视化。
-                            这种技术选择有助于实现虚拟场景的快速建模和高效的可视化展示。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="spotlight style2 right">
-        <span class="image fit main"><img src="{% static 'systemWeb_static/images/pic03.jpg' %}" alt=""/></span>
-        <div class="content">
-            <header>
-                <h2>建模环境展示</h2>
-                <p>互联网、大数据和人工智能等新一代信息技术的快速发展</p>
-            </header>
-            <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用各 种技术实现</p>
-            <ul class="actions">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </div>
-        <a href="#three" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Three -->
-    <section id="three" class="spotlight style3 left">
-        <span class="image fit main bottom"><img src="{% static 'systemWeb_static/images/pic04.jpg' %}" alt=""/></span>
-        <div class="content">
-            <header>
-                <h2>项目介绍可视化系统。</h2>
-                <p> 采用先进的模型和算法进行分析决策，从可视化的角度呈现</p>
-            </header>
-            <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-            <ul class="actions">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </div>
-        <a href="#four" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Four -->
-    <section id="four" class="wrapper style1 special fade-up">
-        <div class="container">
-            <header class="major">
-                <h2>的JavaScript和OpenGL ES2.0，</h2>
-                <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-            </header>
-            <div class="box alt">
-                <div class="row gtr-uniform">
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-chart-area"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-comment"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-flask"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-paper-plane"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-file"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-lock"></span>
-                        <h3>的JavaScript和OpenGL ES2.0，</h3>
-                        <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-                    </section>
-                </div>
-            </div>
-            <footer class="major">
-                <ul class="actions special">
-                    <li><a href="#" class="button">建模AAAAA环境展示</a></li>
-                </ul>
-            </footer>
-        </div>
-    </section>
-
-    <!-- Five -->
-    <section id="five" class="wrapper style2 special fade">
-        <div class="container">
-            <header>
-                <h2>建模环境展示</h2>
-                <p>造”为主导的第四次工业革命已经到来，而“智能制造”的核心就是通过利用.</p>
-            </header>
-            <form method="post" action="#" class="cta">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-8 col-12-xsmall"><input type="email" name="email" id="email"
-                                                            placeholder="Your Email Address"/></div>
-                    <div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary"/>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <ul class="icons">
-            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-            <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: lzy</li>
-        </ul>
-    </footer>
-
+<div class="scroller-wrap">
+    <div class="scroller-item" id="scroller-up">
+        <img src="../static/systemWeb_static/picture/scroll-arrow.svg" alt="Scroll Up">
+    </div>
+    <div class="scroller-percent">0%</div>
+    <div class="scroller-item" id="scroller-down">
+        <img src="../static/systemWeb_static/picture/scroll-arrow.svg" alt="Scroll Down">
+    </div>
 </div>
 
-<!-- Scripts -->
-<script src="{% static 'systemWeb_static/js/jquery.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/jquery.scrolly.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/jquery.dropotron.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/jquery.scrollex.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/browser.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/breakpoints.min.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/util.js' %}"></script>
-<script src="{% static 'systemWeb_static/js/main.js' %}"></script>
+<header class="s-header">
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-bottom-row">
+                <nav class="header-menu">
+                    <ul>
+                        <li class="menu-item current-menu-item"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="menu-item"><a href="{% url 'case_list' %}">Cases</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <nav class="header-menu">
+                        <ul>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#">Account</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="{% url 'login' %}">Login</a></li>
+                                    <li class="menu-item"><a href="{% url 'signUp' %}">Sign Up</a></li>
+                                    <li class="menu-item"><a href="{% url 'logout' %}">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="banner-wrap">
+        <div class="swiper swiper-banner">
+            <div class="swiper-wrapper animate-slide">
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                            {#                         style="background-image: url('../static/systemWeb_static/image/banner_bg_1.jpg');"#}
+                         style="background-image: url('../static/systemWeb_static/image/New/Top-img-1.png');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Digital Twin
+                                </div>
+                                <h1 class="banner-title">
+										<span data-animate="left" class="banner-title-text"> 
+											Product Packaging
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                         style="background-image: url('../static/systemWeb_static/image/New/Top-img-2.png');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Digital Twin</div>
+                                <h1 class="banner-title">
+										<span data-animate="left" class="banner-title-text">
+											Packaging Production
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                         style="background-image: url('../static/systemWeb_static/image/New/Top-img-3.png');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Digital Twin</div>
+                                <h1 class="banner-title">
+										<span class="banner-title-text" data-animate="left">
+											Warehouse Management
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev">
+                <img src="" alt="Previous Slide" class="nav-image-prev">
+            </div>
+            <div class="swiper-button-next">
+                <img src="" alt="Next Slide" class="nav-image-next">
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="about-wrap p-80">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-left wow slideInLeft" data-wow-delay="0.1s">
+                    <img src="{% static 'systemWeb_static/image/New/About-us.png' %}" alt="About us">
+                </div>
+                <div class="about-right">
+                    <div class="def-title wow slideInRight" data-wow-delay="0.3s">About Us</div>
+                    <h2 class="def-subtitle wow slideInRight" data-wow-delay="0.4s">Digital Twin Construction
+                        Solution</h2>
+                    <div class="def-desc wow slideInRight" data-wow-delay="0.5s">
+                        <p>Our project focuses on digital modeling. We hope to use various algorithms to model various
+                            scenes and objects. Ultimately, we can model the entire production line in the factory, help
+                            the factory present the production process, and help managers plan production plans.</p>
+                    </div>
+                    <ul class="about-list">
+                        <li class="wow slideInRight" data-wow-delay="0.6s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_1.svg" alt="Icon 1">
+								</span>
+                            <span>
+									<a href="about.html">PROFESSIONAL SKILL AND EXPERIENCE</a>
+								</span>
+                        </li>
+                        <li class="wow slideInRight" data-wow-delay="0.7s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_2.svg" alt="Icon 2">
+								</span>
+                            <span>
+									<a href="about.html">DIVERSE SUBJECT TEAM</a>
+								</span>
+                        </li>
+                        <li class="wow slideInRight" data-wow-delay="0.8s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_3.svg" alt="Icon 1">
+								</span>
+                            <span>
+									<a href="about.html">EXPERT GUIDANCE</a>
+								</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee-wrap">
+
+        <div class="marquee-row marquee-forward">
+            <div class="marquee-item" data-text="3D">3D</div>
+            <div class="marquee-item" data-text="Vision">Vision</div>
+            <div class="marquee-item" data-text="Digital">Digital</div>
+            <div class="marquee-item" data-text="Twin">Twin</div>
+            <div class="marquee-item" data-text="Reconstruction">Reconstruction</div>
+            <div class="marquee-item" data-text="3D">3D</div>
+            <div class="marquee-item" data-text="Vision">Vision</div>
+            <div class="marquee-item" data-text="Digital">Digital</div>
+            <div class="marquee-item" data-text="Twin">Twin</div>
+            <div class="marquee-item" data-text="Reconstruction">Reconstruction</div>
+            <div class="marquee-item" data-text="3D">3D</div>
+            <div class="marquee-item" data-text="Vision">Vision</div>
+        </div>
+
+    </section>
+
+    <section class="news-wrap p-100">
+        <div class="container">
+            <div class="news-row">
+                <div class="news-left">
+                    <div class="def-title"></div>
+                    <h2 class="def-subtitle">
+                        Related <br>
+                        Researches
+                    </h2>
+                    <div class="def-desc">
+                        <p>Some research related to our research direction.</p>
+                    </div>
+                </div>
+
+                <div class="news-right">
+                    <div class="swiper swiper-news">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-1.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">What is a digital twin? (Amazon.)</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>The introduction of digital twin technology and application scenarios.
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <a href="https://aws.amazon.com/cn/what-is/digital-twin/" class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-2.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">What is a digital twin? (IBM.)</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>The introduction of digital twin technology and application scenarios.
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <a href="https://www.ibm.com/topics/what-is-a-digital-twin"
+                                           class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-3.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">How do company get started with digital twins?</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>What value can digital twins bring? How can businesses start using
+                                                digital twins?
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <a href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-digital-twin-technology"
+                                           class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-4.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">How does digital twin work?</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>A digital twin is a digital representation of a physical object, process,
+                                                service or environment that behaves and looks like its counterpart in
+                                                the real-world.
+                                                <br>
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <a href="https://www.twi-global.com/technical-knowledge/faqs/what-is-digital-twin"
+                                           class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-5.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Examples of using digital twins.</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Simulate and plan your warehouse with a pixel-accurate digital twin.
+                                                Anyverse enables you to simulate any configuration including conveyor
+                                                belts, autonomous mobile robots, and automated guided vehicles.
+                                            </p>
+                                        </div>
+                                        <a href="https://anyverse.ai/use-cases-warehouse-simulation/"
+                                           class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="{% static 'systemWeb_static/image/New/News-6.png' %}" alt="News">
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Digital twin on smart manufacturing.</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>The Digital Twin on Smart Manufacturing project represents an innovative
+                                                approach in modern industry, bringing together technological progress
+                                                and digital innovation.
+                                                <br>
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <a href="https://rcci.bg/en/projects/digital-twin-on-smart-manufacturing/"
+                                           class="news-readmore"
+                                           target="_blank">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-wrap has-backdrop p-100">
+        <div class="container">
+            <div class="title-white title-center">
+                <div class="def-title">Our Team</div>
+                <h2 class="def-subtitle">Our Dedicated Team</h2>
+            </div>
+            <div class="team-row">
+                <div class="team-item">
+                    <a href="" class="team-thumb">
+                        <img src="{% static 'systemWeb_static/image/ProfilePhoto/Wechat-img-Peibang.jpg' %}" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <h4 class="team-name"><a href="">Zheng Peibang</a></h4>
+                        <div class="team-spec">Team Leader</div>
+                        <div class="team-spec">Information Management and Information Systems</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="" class="team-thumb">
+                        <img src="{% static 'systemWeb_static/image/ProfilePhoto/Wechat-img-Weiyan.jpg' %}" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <h4 class="team-name"><a href="">Feng Weiyan</a></h4>
+                        <div class="team-spec">Algorithm Engineer</div>
+                        <div class="team-spec">Computing Science</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="" class="team-thumb">
+                        <img src="{% static 'systemWeb_static/image/ProfilePhoto/Wechat-img-Zhenwei.jpg' %}" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <h4 class="team-name"><a href="">Yang Zhenwei</a></h4>
+                        <div class="team-spec">System Developer</div>
+                        <div class="team-spec">Computing Science</div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-row" style="margin-top: 20px">
+                <div class="team-item">
+                    <a href="" class="team-thumb">
+                        <img src="{% static 'systemWeb_static/image/ProfilePhoto/Wechat-img-Ziyao.jpg' %}" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <h4 class="team-name"><a href="">Liao Ziyao</a></h4>
+                        <div class="team-spec">System Developer</div>
+                        <div class="team-spec">Artificial Intelligence</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="" class="team-thumb">
+                        <img src="{% static 'systemWeb_static/image/ProfilePhoto/Wechat-img-Zhongran.jpg' %}"
+                             alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <h4 class="team-name"><a href="">Liang Zhongran</a></h4>
+                        <div class="team-spec">System Developer</div>
+                        <div class="team-spec">Artificial Intelligence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<footer class="s-footer">
+    <div class="container">
+        <div class="footer-top">
+            <a href="" class="footer-logo">
+                <img src="../static/systemWeb_static/picture/logo.svg" alt="Logo">
+            </a>
+        </div>
+
+        <div class="footer-center">
+            <h4 class="footer-title">Construction You Can Trust</h4>
+            <div class="footer-nav-row">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="../static/systemWeb_static/js/jquery-3.7.0.min.js"></script>
+<script src="../static/systemWeb_static/js/wow.min.js"></script>
+<script src="../static/systemWeb_static/js/magnific-popup.min.js"></script>
+<script src="../static/systemWeb_static/js/swiper-bundle.min.js"></script>
+<script src="../static/systemWeb_static/js/imagesloaded.pkgd.min.js"></script>
+<script src="../static/systemWeb_static/js/masonry.pkgd.min.js"></script>
+<script src="../static/systemWeb_static/js/script.js"></script>
 
 </body>
+
 </html>

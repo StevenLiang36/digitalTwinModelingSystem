@@ -1,0 +1,1646 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/systemWeb_static/css/animate.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../static/systemWeb_static/css/style.css">
+    <title>3D-Reconstruction</title>
+</head>
+
+<body>
+
+<div id="cursor"></div>
+
+<div class="preloader-wrap" id="preloader-container">
+    <div class="preloader-item">
+        <img src="../static/systemWeb_static/picture/preloader-logo.svg" alt="Preloader Logo">
+        <div class="preloader-line">
+            <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+    </div>
+    <div class="preloader-close">Close Preloader</div>
+</div>
+<div class="search-wrap">
+    <div class="search-close">
+        <img src="../static/systemWeb_static/picture/close.svg" alt="Close">
+    </div>
+    <div class="search-container">
+        <form>
+            <input type="search" placeholder="Search ...">
+            <button>
+                <img src="../static/systemWeb_static/picture/magnify.svg" alt="Search">
+            </button>
+        </form>
+    </div>
+</div>
+<div class="addon-wrap">
+    <div class="addon-top">
+        <a href="#" class="addon-logo">
+            <img src="../static/systemWeb_static/picture/logo.svg" alt="Logo">
+        </a>
+        <div class="addon-close">
+            <img src="../static/systemWeb_static/picture/close.svg" alt="Close">
+        </div>
+    </div>
+    <div class="addon-body">
+        <div class="addon-desc">
+            <p>Construction is a full service building design company with a simple and unique design and construction
+                philosophy. We believe that one building designer will take the job from concept on paper to
+                implementation on your site.</p>
+        </div>
+        <div class="addon-contacts">
+            <h4 class="addon-contacts-title">Contacts Info</h4>
+            <div class="addon-el-wrap">
+                <div class="addon-el-item">
+						<span class="addon-el-image">
+							<img src="../static/systemWeb_static/picture/location.svg" alt="Location">
+						</span>
+                    <div class="addon-el-text">
+                        <div class="addon-el-title">Address</div>
+                        <div class="addon-el-subtitle">Star Street, 42, Fantasy City</div>
+                    </div>
+                </div>
+                <a href="#" class="addon-el-item">
+						<span class="addon-el-image">
+							<img src="../static/systemWeb_static/picture/phone.svg" alt="Phone">
+						</span>
+                    <div class="addon-el-text">
+                        <div class="addon-el-title">Phone</div>
+                        <div class="addon-el-subtitle">+(6) 666-653-4523</div>
+                    </div>
+                </a>
+                <a href="#" class="addon-el-item">
+						<span class="addon-el-image">
+							<img src="../static/systemWeb_static/picture/envelope.svg" alt="Email">
+						</span>
+                    <div class="addon-el-text">
+                        <div class="addon-el-title">Email</div>
+                        <div class="addon-el-subtitle">construct@gmail.com</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="addon-footer">
+                <div class="addon-social">
+                    <a href="#">
+                        <img src="../static/systemWeb_static/picture/facebook-white.svg" alt="Facebook">
+                    </a>
+                    <a href="#">
+                        <img src="../static/systemWeb_static/picture/twitter-white.svg" alt="Twitter">
+                    </a>
+                    <a href="#">
+                        <img src="../static/systemWeb_static/picture/telegram-white.svg" alt="Telegram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="backdrop"></div>
+
+<div class="header-mobile-wrap">
+
+    <div class="header-mobile-top">
+        <a href="" class="header-mobile-logo">
+            <img src="../static/systemWeb_static/picture/logo.svg" alt="Logo">
+        </a>
+        <div class="header-mobile-close">
+            <img src="../static/systemWeb_static/picture/close.svg" alt="Close">
+        </div>
+    </div>
+    <div class="header-mobile-row">
+        <div class="header-mobile-left">
+            <nav class="header-menu">
+                <ul>
+                    <li class="menu-item current-menu-item"><a href="/">Home</a></li>
+                    <li class="menu-item"><a href="about.html">About Us</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <span class="menu-open-arrow">
+							<img src="../static/systemWeb_static/picture/caret.svg" alt="Caret">
+						</span>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="about.html">About Us</a></li>
+                            <li class="menu-item"><a href="team-v1.html">Team V1</a></li>
+                            <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                            <li class="menu-item"><a href="team-v2.html">Team V2</a></li>
+                            <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                            <li class="menu-item"><a href="404.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="services.html">Services</a></li>
+                    <li class="menu-item">
+                        <a href="portfolio-grid-2.html">Portfolio</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <span class="menu-open-arrow">
+							<img src="../static/systemWeb_static/picture/caret.svg" alt="Caret">
+						</span>
+                        <ul class="sub-menu">
+                            <li><a href="blog-classic.html">Classic</a></li>
+                            <li><a href="blog-list.html">List View</a></li>
+                            <li><a href="blog-grid.html">Grid View</a></li>
+                            <li><a href="article.html">Article</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-mobile-social">
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/facebook-white.svg" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/twitter-white.svg" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/telegram-white.svg" alt="Telegram">
+                </a>
+            </div>
+        </div>
+
+        <div class="header-mobile-right">
+            <div class="header-mobile-el">
+                <div class="header-el-item">
+					<span class="header-el-image">
+						<img src="../static/systemWeb_static/picture/location.svg" alt="Location">
+					</span>
+                    <div class="header-el-text">
+                        <div class="header-el-title">Address</div>
+                        <div class="header-el-subtitle">Star Street, 42, Fantasy City</div>
+                    </div>
+                </div>
+                <a href="#" class="header-el-item">
+					<span class="header-el-image">
+						<img src="../static/systemWeb_static/picture/phone.svg" alt="Phone">
+					</span>
+                    <div class="header-el-text">
+                        <div class="header-el-title">Phone</div>
+                        <div class="header-el-subtitle">+(6) 666-653-4523</div>
+                    </div>
+                </a>
+                <a href="#" class="header-el-item">
+					<span class="header-el-image">
+						<img src="../static/systemWeb_static/picture/envelope.svg" alt="Email">
+					</span>
+                    <div class="header-el-text">
+                        <div class="header-el-title">Email</div>
+                        <div class="header-el-subtitle">construct@gmail.com</div>
+                    </div>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="header-button">
+                    <a href="#">Get a quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="scroller-wrap">
+    <div class="scroller-item" id="scroller-up">
+        <img src="../static/systemWeb_static/picture/scroll-arrow.svg" alt="Scroll Up">
+    </div>
+    <div class="scroller-percent">0%</div>
+    <div class="scroller-item" id="scroller-down">
+        <img src="../static/systemWeb_static/picture/scroll-arrow.svg" alt="Scroll Down">
+    </div>
+</div>
+
+<header class="s-header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-row">
+                <a href="" class="header-logo">
+                    <img src="../static/systemWeb_static/picture/logo.svg" alt="Logo">
+                </a>
+                <div class="header-el-wrap">
+                    <div class="header-el-item">
+							<span class="header-el-image">
+								<img src="../static/systemWeb_static/picture/location.svg" alt="Location">
+							</span>
+                        <div class="header-el-text">
+                            <div class="header-el-title">Address</div>
+                            <div class="header-el-subtitle">Star Street, 42, Fantasy City</div>
+                        </div>
+                    </div>
+                    <a href="#" class="header-el-item">
+							<span class="header-el-image">
+								<img src="../static/systemWeb_static/picture/phone.svg" alt="Phone">
+							</span>
+                        <div class="header-el-text">
+                            <div class="header-el-title">Phone</div>
+                            <div class="header-el-subtitle">+(6) 666-653-4523</div>
+                        </div>
+                    </a>
+                    <a href="#" class="header-el-item">
+							<span class="header-el-image">
+								<img src="../static/systemWeb_static/picture/envelope.svg" alt="Email">
+							</span>
+                        <div class="header-el-text">
+                            <div class="header-el-title">Email</div>
+                            <div class="header-el-subtitle">construct@demo.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="header-mobile-search">
+                    <a href="#" class="header-eltwo-item search-btn-js">
+                        <img src="../static/systemWeb_static/picture/magnify.svg" alt="Search">
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <img src="../static/systemWeb_static/picture/hamburger.svg" alt="Hamburger">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-bottom-row">
+                <nav class="header-menu">
+                    <ul>
+                        <li class="menu-item current-menu-item"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="menu-item"><a href="{% url 'case_list' %}">Cases</a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="about.html">About Us</a></li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="team-v1.html">Team</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="team-v1.html">Team V1</a></li>
+                                        <li class="menu-item"><a href="team-v2.html">Team V2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                                <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                                <li class="menu-item"><a href="404.html">Error Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="services.html">Services</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="services.html">Services</a></li>
+                                <li class="menu-item"><a href="service-single.html">Service Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="portfolio">Portfolio</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Grid View</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="portfolio-grid-2.html">Grid Column 2</a></li>
+                                        <li><a href="portfolio-grid-3.html">Grid Column 3</a></li>
+                                        <li><a href="portfolio-grid-4.html">Grid Column 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Masonry View</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="portfolio-masonry-2.html">Masonry Column 2</a></li>
+                                        <li><a href="portfolio-masonry-3.html">Masonry Column 3</a></li>
+                                        <li><a href="portfolio-masonry-4.html">Masonry Column 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="portfolio-single.html">Portfolio Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-classic.html">Classic</a></li>
+                                <li><a href="blog-list.html">List View</a></li>
+                                <li><a href="blog-grid.html">Grid View</a></li>
+                                <li><a href="article.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <div class="header-eltwo-wrap">
+                        <a href="#" class="header-eltwo-item search-btn-js">
+                            <img src="../static/systemWeb_static/picture/magnify.svg" alt="Search">
+                        </a>
+                        <a href="#" class="header-eltwo-item addon-btn-js">
+                            <img src="../static/systemWeb_static/picture/button.svg" alt="Button">
+                        </a>
+                    </div>
+                    <div class="header-button">
+                        <a href="contact.html">Get a quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="banner-wrap">
+        <div class="swiper swiper-banner">
+            <div class="swiper-wrapper animate-slide">
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                         style="background-image: url('../static/systemWeb_static/image/banner_bg_1.jpg');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Your Premier Partner in Building
+                                    Futures
+                                </div>
+                                <h1 class="banner-title">
+										<span data-animate="left" class="banner-title-text"> 
+											Visions Concrete <br> 
+											Reality
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                                <div class="banner-desc" data-animate="left">
+                                    <p>Building Tomorrow, Together Expertise, <br> Excellence, and Enduring Quality</p>
+                                </div>
+                                <div class="banner-btn" data-animate="left">
+                                    <a href="#" class="button bg-color-1">
+                                        <span>About us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                         style="background-image: url('../static/systemWeb_static/image/banner_bg_2.jpg');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Redefining Excellence</div>
+                                <h1 class="banner-title">
+										<span data-animate="left" class="banner-title-text">
+											Building Beyond Boundaries
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                                <div class="banner-desc" data-animate="left">
+                                    <p>At Apex Constructors, we're more than just builders; we're architects of
+                                        innovation. With a commitment to excellence.</p>
+                                </div>
+                                <div class="banner-btn" data-animate="left">
+                                    <a href="#" class="button bg-color-1">
+                                        <span>About us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-content"
+                         style="background-image: url('../static/systemWeb_static/image/banner_bg_3.jpg');"
+                         data-swiper-parallax="50%">
+                        <div class="banner-row">
+                            <div class="banner-left">
+                                <div class="banner-toptitle" data-animate="left">Summit Construction Co</div>
+                                <h1 class="banner-title">
+										<span class="banner-title-text" data-animate="left">
+											Project Reaches <br> 
+											New Heights
+										</span>
+                                    <div class="banner-rectangle">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                                <div class="banner-desc" data-animate="left">
+                                    <p>Summit Construction Co. specializes in elevating spaces to unparalleled levels of
+                                        sophistication</p>
+                                </div>
+                                <div class="banner-btn" data-animate="left">
+                                    <a href="#" class="button bg-color-1">
+                                        <span>About us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev">
+                <img src="" alt="Previous Slide" class="nav-image-prev">
+            </div>
+            <div class="swiper-button-next">
+                <img src="" alt="Next Slide" class="nav-image-next">
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="numbers-wrap">
+        <div class="container">
+            <div class="numbers-row num-scroll">
+                <div class="numbers-item">
+                    <div class="numbers-title num-js" data-count="20">0</div>
+                    <div class="numbers-subtitle">Years experience</div>
+                </div>
+                <div class="numbers-item">
+                    <div class="numbers-title num-js" data-count="500">0</div>
+                    <div class="numbers-subtitle">Satisfied clients</div>
+                </div>
+                <div class="numbers-item">
+                    <div class="numbers-title num-js" data-count="900">0</div>
+                    <div class="numbers-subtitle">Realized projects</div>
+                </div>
+                <div class="numbers-item">
+                    <div class="numbers-title num-js" data-count="15">0</div>
+                    <div class="numbers-subtitle">Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-wrap p-80">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-left wow slideInLeft" data-wow-delay="0.1s">
+                    <img src="../static/systemWeb_static/picture/works-8.jpg" alt="About us">
+                </div>
+                <div class="about-right">
+                    <div class="def-title wow slideInRight" data-wow-delay="0.3s">About Us</div>
+                    <h2 class="def-subtitle wow slideInRight" data-wow-delay="0.4s">Innovative Construction
+                        Solutions</h2>
+                    <div class="def-desc wow slideInRight" data-wow-delay="0.5s">
+                        <p>NovaBuild is a full service building design company with a simple and unique design and
+                            construction philosophy. We believe that one building designer will take the job from
+                            concept on paper to implementation on your site.</p>
+                    </div>
+                    <ul class="about-list">
+                        <li class="wow slideInRight" data-wow-delay="0.6s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_1.svg" alt="Icon 1">
+								</span>
+                            <span>
+									<a href="about.html">Professional Experience</a>
+								</span>
+                        </li>
+                        <li class="wow slideInRight" data-wow-delay="0.7s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_2.svg" alt="Icon 2">
+								</span>
+                            <span>
+									<a href="about.html">Expert Team</a>
+								</span>
+                        </li>
+                        <li class="wow slideInRight" data-wow-delay="0.8s">
+								<span>
+									<img src="../static/systemWeb_static/picture/about_icon_3.svg" alt="Icon 1">
+								</span>
+                            <span>
+									<a href="about.html">Company Philosophy</a>
+								</span>
+                        </li>
+                    </ul>
+                    <div class="about-btn wow slideInRight" data-wow-delay="0.9s">
+                        <a href="about.html" class="button bg-color-1">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee-wrap">
+
+        <div class="marquee-row marquee-forward">
+            <div class="marquee-item" data-text="Construction">Construction</div>
+            <div class="marquee-item" data-text="Building">Building</div>
+            <div class="marquee-item" data-text="Renovation">Renovation</div>
+            <div class="marquee-item" data-text="Architecture">Architecture</div>
+            <div class="marquee-item" data-text="Contractor">Contractor</div>
+            <div class="marquee-item" data-text="HomeImprovement">HomeImprovement</div>
+            <div class="marquee-item" data-text="ConstructionSite">ConstructionSite</div>
+            <div class="marquee-item" data-text="DesignBuild">DesignBuild</div>
+            <div class="marquee-item" data-text="Roofing">Roofing</div>
+        </div>
+
+    </section>
+
+    <section class="features-wrap p-100"
+             style="background-image: url('../static/systemWeb_static/image/features_bg.jpg');">
+        <div class="container">
+            <div class="features-row">
+                <div class="features-left">
+                    <div class="features-img">
+                        <img src="../static/systemWeb_static/picture/building_nobg.png" alt="Building">
+                    </div>
+                </div>
+                <div class="features-right">
+                    <div class="features-title-wrap">
+                        <div class="def-title">Why choose us?</div>
+                        <h2 class="def-subtitle">Excellence, Integrity, and Commitment</h2>
+                        <div class="def-desc">
+                            <p>At NovaBuild, we are dedicated to delivering unparalleled service and exceptional
+                                results</p>
+                        </div>
+                    </div>
+                    <div class="features-row">
+                        <div class="features-item">
+                            <div class="features-thumb">
+                                <img src="../static/systemWeb_static/picture/features_1.svg" alt="Features">
+                            </div>
+                            <h4 class="features-title">Expert Knowledge and Experience</h4>
+                        </div>
+                        <div class="features-item">
+                            <div class="features-thumb">
+                                <img src="../static/systemWeb_static/picture/features_2.svg" alt="Features">
+                            </div>
+                            <h4 class="features-title">Tailored Approach</h4>
+                        </div>
+                        <div class="features-item">
+                            <div class="features-thumb">
+                                <img src="../static/systemWeb_static/picture/features_3.svg" alt="Features">
+                            </div>
+                            <h4 class="features-title">Advanced Technologies</h4>
+                        </div>
+                        <div class="features-item">
+                            <div class="features-thumb">
+                                <img src="../static/systemWeb_static/picture/features_4.svg" alt="Features">
+                            </div>
+                            <h4 class="features-title">Environmental Responsibility</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-wrap p-100">
+        <div class="container">
+            <div class="title-center mb-60">
+                <div class="def-title">Our Services</div>
+                <div class="def-subtitle">Our Diverse Range of Services</div>
+                <div class="def-desc">From Concept to Completion. Explore Our Service Offerings</div>
+            </div>
+
+            <div class="swiper swiper-services">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-1.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="service-single.html">Architectural Design</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Experience luxury living at Harmony Heights Residence, where modern
+                                        architecture.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-2.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="service-single.html">General Contracting</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Experience seamless project execution with our expert general contracting
+                                        services.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-3.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="service-single.html">Project Management</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Expertly manage your projects with our comprehensive, efficient services.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-4.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="service-single.html">Custom Home Building</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Crafting your dream home with precision, quality, and personalized service.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-5.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="#">Renovations</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Transforming spaces with creativity, expertise, and attention to detail.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-6.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="#">Construction</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Elevating business environments with professional expertise and innovative
+                                        solutions.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-item">
+                            <div class="services-thumb">
+                                <a class="services-icon">
+                                    <img src="../static/systemWeb_static/picture/service-icon-7.svg" alt="Service">
+                                </a>
+                            </div>
+                            <div class="services-body">
+                                <h4 class="services-title">
+                                    <a href="#">Eco-Upgrade</a>
+                                </h4>
+                                <div class="services-desc">
+                                    <p>Leading the way in sustainable construction practices, provide eco-friendly
+                                        enhance energy.</p>
+                                </div>
+                                <a href="service-single.html" class="services-arrow">
+                                    <span>Read More</span>
+                                    <span><img src="../static/systemWeb_static/picture/arrow-right-length.svg"
+                                               alt="Read more"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <div class="backdrop-image">
+                <img src="../static/systemWeb_static/picture/general.png" alt="Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="works-wrap p-100">
+        <div class="container">
+            <div class="works-title-wrap title-white title-center">
+                <div class="def-title">Our Portfolio</div>
+                <h2 class="def-subtitle">Experience the Excellence</h2>
+                <div class="def-desc">
+                    <p>Explore our diverse portfolio showcasing our expertise across various projects</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper swiper-works">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-1.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">Residential Renovations</div>
+                            <div class="works-name">MasterWorks Showcase</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-2.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">Commercial Constructions</div>
+                            <div class="works-name">Blueprint Brilliance</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-3.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">Architectural Marvels</div>
+                            <div class="works-name">Crafted Creations</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-4.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">Diverse Design Delights</div>
+                            <div class="works-name">Building Brilliance</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-5.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">Architectural Design</div>
+                            <div class="works-name">Structural Splendor</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio-single.html" class="works-item">
+                        <div class="works-thumb">
+                            <img src="../static/systemWeb_static/picture/works-6.jpg" alt="Work">
+                        </div>
+                        <div class="works-body">
+                            <div class="works-cat">House Renovation</div>
+                            <div class="works-name">Harmony Heights Residence</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+    <section class="news-wrap p-100">
+        <div class="container">
+            <div class="news-row">
+                <div class="news-left">
+                    <div class="def-title">Our blogs</div>
+                    <h2 class="def-subtitle">
+                        Stay Updated. <br>
+                        Our Latest News
+                    </h2>
+                    <div class="def-desc">
+                        <p>Explore our newest updates and developments. <br>
+                            Stay informed with our latest news section.</p>
+                    </div>
+                    <div class="news-btn">
+                        <a href="blog-classic.html" class="button bg-color-1">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="news-right">
+                    <div class="swiper swiper-news">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-1.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>15</strong>
+                                            <span>May</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">The Future of Construction</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Explore how sustainable practices are reshaping the construction
+                                                industry. From eco-friendly materials to energy-efficient designs,
+                                                discover innovative approaches to...</p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-2.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>3</strong>
+                                            <span>July</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Revitalizing City Spaces</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Delve into the transformative power of urban renewal projects. From
+                                                revitalizing historic districts to repurposing industrial sites, learn
+                                                how thoughtful design and strategic... </p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-3.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>5</strong>
+                                            <span>June</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Reshaping Construction Efficiency</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Discover the latest advancements revolutionizing the construction sector.
+                                                From drones and 3D printing to virtual reality simulations...</p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-4.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>1</strong>
+                                            <span>May</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Innovations and Best Practices</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Dive into the world of sustainable construction as we explore
+                                                cutting-edge technologies and eco-friendly methodologies revolutionizing
+                                                the building industry...</p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-5.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>1</strong>
+                                            <span>April</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Transforming Spaces, Elevating Lives</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Uncover the transformative potential of renovation projects in this
+                                                insightful article. Through captivating...</p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-item">
+                                    <a href="article.html" class="news-thumb">
+                                        <img src="../static/systemWeb_static/picture/news-6.jpg" alt="News">
+                                        <div class="news-date">
+                                            <strong>10</strong>
+                                            <span>April</span>
+                                        </div>
+                                    </a>
+                                    <div class="news-body">
+                                        <h4 class="news-title">
+                                            <a href="article.html">Complex Construction Projects</a>
+                                        </h4>
+                                        <div class="news-desc">
+                                            <p>Embark on a journey through the intricacies of complex construction
+                                                projects with this in-depth article. Delve into the challenges...</p>
+                                        </div>
+                                        <a href="article.html" class="news-readmore">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-wrap has-backdrop p-100">
+        <div class="container">
+            <div class="title-white title-center">
+                <div class="def-title">Our Team</div>
+                <h2 class="def-subtitle">Our Dedicated Team</h2>
+            </div>
+            <div class="team-row">
+                <div class="team-item">
+                    <a href="team-single.html" class="team-thumb">
+                        <img src="../static/systemWeb_static/picture/team-1.jpg" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <div class="team-social">
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/facebook-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/telegram-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/twiiter-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/whatsapp-dark.svg" alt="Social">
+                            </a>
+                        </div>
+                        <h4 class="team-name"><a href="team-single.html">David Protopskiy</a></h4>
+                        <div class="team-spec">Design Innovator</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="team-single.html" class="team-thumb">
+                        <img src="../static/systemWeb_static/picture/team-2.jpg" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <div class="team-social">
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/facebook-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/telegram-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/twiiter-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/whatsapp-dark.svg" alt="Social">
+                            </a>
+                        </div>
+                        <h4 class="team-name"><a href="team-single.html">James Anderson</a></h4>
+                        <div class="team-spec">Electrical Engineer</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="team-single.html" class="team-thumb">
+                        <img src="../static/systemWeb_static/picture/team-3.jpg" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <div class="team-social">
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/facebook-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/telegram-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/twiiter-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/whatsapp-dark.svg" alt="Social">
+                            </a>
+                        </div>
+                        <h4 class="team-name"><a href="team-single.html">Robert Martinez</a></h4>
+                        <div class="team-spec">Roofing Specialist</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <a href="team-single.html" class="team-thumb">
+                        <img src="../static/systemWeb_static/picture/team-4.jpg" alt="Team">
+                    </a>
+                    <div class="team-body">
+                        <div class="team-social">
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/facebook-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/telegram-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/twiiter-dark.svg" alt="Social">
+                            </a>
+                            <a href="#">
+                                <img src="../static/systemWeb_static/picture/whatsapp-dark.svg" alt="Social">
+                            </a>
+                        </div>
+                        <h4 class="team-name"><a href="team-single.html">Sarah Mitchell</a></h4>
+                        <div class="team-spec">Civil Engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-wrap">
+        <div class="container">
+            <div class="reviews-row">
+                <div class="reviews-left">
+                    <div class="def-title">Testimonials</div>
+                    <h2 class="def-subtitle">
+                        What People <br>
+                        Say About Us
+                    </h2>
+                    <div class="def-desc">
+                        <p>Explore our newest updates and developments. Stay informed with our latest news section</p>
+                    </div>
+                </div>
+
+                <div class="reviews-right">
+                    <div class="swiper swiper-reviews">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-text">
+                                        <p>I couldn't be happier with the work done by Construction. Their team was
+                                            professional, efficient, and incredibly detail-oriented. They transformed
+                                            our outdated kitchen into a modern masterpiece. Communication was clear
+                                            throughout the project, and they finished ahead of schedule. Highly
+                                            recommend!</p>
+                                    </div>
+                                    <div class="reviews-footer">
+                                        <div class="reviews-thumb">
+                                            <img src="../static/systemWeb_static/picture/reviews-1.jpg" alt="Review">
+                                        </div>
+                                        <div class="reviews-name-wrap">
+                                            <div class="reviews-name">Michael Brown</div>
+                                            <div class="reviews-spec">Financial Analyst</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-text">
+                                        <p>Construction exceeded our expectations on every level. From the initial
+                                            consultation to the final walkthrough, their dedication to quality and
+                                            customer satisfaction was evident. The construction crew was punctual,
+                                            respectful, and kept the site clean. We are thrilled with our new home
+                                            addition!</p>
+                                    </div>
+                                    <div class="reviews-footer">
+                                        <div class="reviews-thumb">
+                                            <img src="../static/systemWeb_static/picture/reviews-2.jpg" alt="Review">
+                                        </div>
+                                        <div class="reviews-name-wrap">
+                                            <div class="reviews-name">Emily Johnson</div>
+                                            <div class="reviews-spec">Interior Designer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-text">
+                                        <p>We hired Construction for a major renovation of our office building. Their
+                                            expertise and craftsmanship were top-notch. They stayed within budget and
+                                            completed the project on time. The project manager was always available to
+                                            address any concerns we had. I would definitely use their services
+                                            again.</p>
+                                    </div>
+                                    <div class="reviews-footer">
+                                        <div class="reviews-thumb">
+                                            <img src="../static/systemWeb_static/picture/reviews-3.jpg" alt="Review">
+                                        </div>
+                                        <div class="reviews-name-wrap">
+                                            <div class="reviews-name">John Smith</div>
+                                            <div class="reviews-spec">Business Owner</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-text">
+                                        <p>Working with Construction was a fantastic experience. They remodeled our
+                                            bathroom, and the results are stunning. The team paid great attention to
+                                            detail and used high-quality materials. The entire process was smooth, and
+                                            they made sure to minimize disruptions to our daily routine. A+ service!</p>
+                                    </div>
+                                    <div class="reviews-footer">
+                                        <div class="reviews-thumb">
+                                            <img src="../static/systemWeb_static/picture/reviews-4.jpg" alt="Review">
+                                        </div>
+                                        <div class="reviews-name-wrap">
+                                            <div class="reviews-name">Sarah Davis</div>
+                                            <div class="reviews-spec">Marketing Manager</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-text">
+                                        <p>I highly recommend Construction for any construction needs. They built our
+                                            dream home, and the entire process was seamless. Their team was
+                                            knowledgeable, friendly, and always willing to go the extra mile. The final
+                                            product was exactly what we envisioned, and we couldn't be more pleased.</p>
+                                    </div>
+                                    <div class="reviews-footer">
+                                        <div class="reviews-thumb">
+                                            <img src="../static/systemWeb_static/picture/reviews-5.jpg" alt="Review">
+                                        </div>
+                                        <div class="reviews-name-wrap">
+                                            <div class="reviews-name">David Wilson</div>
+                                            <div class="reviews-spec">Architect</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-wrap p-60">
+        <div class="container">
+            <div class="swiper swiper-partners">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-1.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-1.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-2.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-2.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-3.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-3.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-4.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-4.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-5.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-5.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-1.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-1.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-2.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-2.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-3.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-3.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-4.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-4.svg" alt="Partner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="partners-item">
+                            <img src="../static/systemWeb_static/picture/partner-5.1.svg" alt="Partner">
+                            <img src="../static/systemWeb_static/picture/partner-5.svg" alt="Partner">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="workflow-wrap p-100">
+        <div class="container">
+            <div class="workflow-title-wrap">
+                <div class="def-title">Our Workflow</div>
+                <h2 class="def-subtitle">
+                    How We Achieve Success
+                </h2>
+            </div>
+            <div class="workflow-row">
+                <div class="workflow-item">
+                    <h4 class="workflow-title">Planning</h4>
+                    <div class="workflow-desc">
+                        <p>We start with a thorough analysis of your needs and goals. During this phase, we conduct
+                            consultations, study the specifics of your business, and develop a customized action plan
+                            designed to achieve the best results.</p>
+                    </div>
+                    <div class="workflow-num">01</div>
+                </div>
+                <div class="workflow-item">
+                    <h4 class="workflow-title">Development</h4>
+                    <div class="workflow-desc">
+                        <p>Our experts begin developing and implementing strategies based on your unique plan. We use
+                            advanced technologies and proven methods to create solutions that meet and even exceed your
+                            expectations.</p>
+                    </div>
+                    <div class="workflow-num">02</div>
+                </div>
+                <div class="workflow-item">
+                    <h4 class="workflow-title">Monitoring</h4>
+                    <div class="workflow-desc">
+                        <p>After the project launch, we continue to monitor its performance and make necessary
+                            adjustments. We analyze the results, gather feedback, and implement improvements to ensure
+                            steady growth and successful achievement of all your goals.</p>
+                    </div>
+                    <div class="workflow-num">03</div>
+                </div>
+            </div>
+            <div class="workflow-image">
+                <img src="../static/systemWeb_static/picture/workflow-image.jpg" alt="Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="form-wrap p-100">
+        <div class="container">
+            <div class="form-row">
+
+                <div class="form-touch">
+                    <div class="form-title-wrap title-white">
+                        <div class="def-title">Get in touch</div>
+                        <h2 class="def-subtitle">
+                            Reach Out for <br>
+                            Expert Assistance
+                        </h2>
+                    </div>
+                    <form class="ajax-form">
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="Project Name">
+                        <input type="hidden" name="admin_email" value="admin_email@gmail.com">
+                        <input type="hidden" name="email_from" value="info@admin_mail.com">
+                        <input type="hidden" name="form_subject" value="New letter from the site Project Name">
+                        <!-- END Hidden Required Fields -->
+
+                        <label class="form-label">
+						<span class="inp-icon">
+							<img src="../static/systemWeb_static/picture/inp-user.svg" alt="Name">
+						</span>
+                            <input type="text" name="Name" placeholder="Your Name" id="inp-name" required="">
+                        </label>
+                        <label class="form-label">
+						<span class="inp-icon">
+							<img src="../static/systemWeb_static/picture/inp-email.svg" alt="Email">
+						</span>
+                            <input type="text" name="Email" placeholder="Your Email" id="inp-email" required="">
+                        </label>
+                        <label class="form-label">
+						<span class="inp-icon">
+							<img src="../static/systemWeb_static/picture/inp-phone.svg" alt="Phone">
+						</span>
+                            <input type="text" name="Phone" placeholder="Your Phone" id="inp-phone">
+                        </label>
+                        <label for="inp-name" class="form-label">
+						<span class="inp-icon">
+							<img src="../static/systemWeb_static/picture/inp-subject.svg" alt="Subject">
+						</span>
+                            <input type="text" name="Subject" placeholder="Subject" id="inp-subject">
+                        </label>
+                        <label class="form-label">
+						<span class="inp-icon inp-message-icon">
+							<img src="../static/systemWeb_static/picture/inp-envelope.svg" alt="Message">
+						</span>
+                            <textarea id="inp-message" name="Message" placeholder="Message"></textarea>
+                        </label>
+                        <fieldset class="form-button">
+                            <button class="button bg-color-1">Submit Request</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="faq-wrap">
+                    <div class="faq-title-wrap">
+                        <div class="def-title">FAQ</div>
+                        <h2 class="def-subtitle">
+                            Frequently asked questions
+                        </h2>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-num">01.</span>
+                            <span class="faq-text">What projects do you handle?</span>
+                            <div class="faq-arrow">
+                                <img src="../static/systemWeb_static/picture/faq-arrow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our experts begin developing and implementing strategies based on your unique plan. We
+                                use advanced technologies and proven methods to create</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-num">02.</span>
+                            <span class="faq-text">How do you ensure quality?</span>
+                            <div class="faq-arrow">
+                                <img src="../static/systemWeb_static/picture/faq-arrow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>High standards, regular inspections.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-num">03.</span>
+                            <span class="faq-text">Project timeline?</span>
+                            <div class="faq-arrow">
+                                <img src="../static/systemWeb_static/picture/faq-arrow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Varies, detailed schedule provided.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-num">04.</span>
+                            <span class="faq-text">Design and planning help?</span>
+                            <div class="faq-arrow">
+                                <img src="../static/systemWeb_static/picture/faq-arrow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, comprehensive design services.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-num">05.</span>
+                            <span class="faq-text">Permits and regulations?</span>
+                            <div class="faq-arrow">
+                                <img src="../static/systemWeb_static/picture/faq-arrow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our experts begin developing and implementing strategies based on your unique plan. We
+                                use advanced technologies and proven methods to create</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="newletter-wrap">
+        <div class="container">
+            <div class="newsletter-title-wrap title-white">
+                <div class="title-left">
+                    <img src="../static/systemWeb_static/picture/newsletter-icon.svg" alt="Newsletter">
+                </div>
+                <div class="title-right">
+                    <div class="def-title">Subscribe to Our Newsletter</div>
+                    <h2 class="def-subtitle">
+                        Subscribe for Exclusive Updates and Offers
+                    </h2>
+                </div>
+            </div>
+
+            <div class="newsletter-form">
+                <form>
+                    <label class="form-label">
+					<span class="inp-icon">
+						<img src="../static/systemWeb_static/picture/inp-email.svg" alt="Email">
+					</span>
+                        <input type="text" placeholder="Your Email" id="inp-email">
+                    </label>
+                    <button class="newsletter-btn button bg-color-1">
+					<span class="send-icon">
+						<img src="../static/systemWeb_static/picture/send-icon.svg" alt="Send Icon">
+						<img src="../static/systemWeb_static/picture/newsletter-icon.svg" alt="Newsletter Icon">
+					</span>
+                        <span class="send-text">Send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="s-footer">
+    <div class="container">
+        <div class="footer-top">
+            <a href="" class="footer-logo">
+                <img src="../static/systemWeb_static/picture/logo.svg" alt="Logo">
+            </a>
+            <div class="footer-info-wrap">
+                <div class="footer-info-item">
+					<span class="footer-info-icon">
+						<img src="../static/systemWeb_static/picture/location.svg" alt="Address">
+					</span>
+                    <div class="footer-info-text">
+                        <div class="footer-info-title">Address</div>
+                        <div class="footer-info-value">Star Street, 42, Fantasy City</div>
+                    </div>
+                </div>
+                <a href="tel:(200) 666-6525" class="footer-info-item">
+					<span class="footer-info-icon">
+						<img src="../static/systemWeb_static/picture/phone.svg" alt="Phone">
+					</span>
+                    <div class="footer-info-text">
+                        <div class="footer-info-title">Phone</div>
+                        <div class="footer-info-value">(200) 666-6525</div>
+                    </div>
+                </a>
+                <a href="mailto:construct@demo.com" class="footer-info-item">
+					<span class="footer-info-icon">
+						<img src="../static/systemWeb_static/picture/envelope.svg" alt="Email">
+					</span>
+                    <div class="footer-info-text">
+                        <div class="footer-info-title">Email</div>
+                        <div class="footer-info-value">construct@demo.com</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <h4 class="footer-title">Construction You Can Trust</h4>
+            <div class="footer-nav-row">
+                <nav class="footer-nav">
+                    <h5 class="footer-nav-title">Useful links</h5>
+                    <ul class="footer-ul">
+                        <li><a href="">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-nav">
+                    <h5 class="footer-nav-title">Useful Links 2</h5>
+                    <ul class="footer-ul">
+                        <li><a href="team-v1.html">Team</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-nav">
+                    <h5 class="footer-nav-title">Services</h5>
+                    <ul class="footer-ul">
+                        <li><a href="service.html">Architectural Design</a></li>
+                        <li><a href="service.html">General Contracting</a></li>
+                        <li><a href="service.html">Project Management</a></li>
+                        <li><a href="service.html">Custom Home Building</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-nav footer-map">
+                    <h5 class="footer-nav-title">We are on the map</h5>
+                    <iframe src="embed.html" width="600" height="450" style="border:0;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                Copyright &copy; 2024.Company name All rights reserved.<a target="_blank"
+                                                                          href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+            </div>
+            <div class="footer-social">
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/facebook-white.svg" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/twitter-white.svg" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="../static/systemWeb_static/picture/telegram-white.svg" alt="Telegram">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="../static/systemWeb_static/js/jquery-3.7.0.min.js"></script>
+<script src="../static/systemWeb_static/js/wow.min.js"></script>
+<script src="../static/systemWeb_static/js/magnific-popup.min.js"></script>
+<script src="../static/systemWeb_static/js/swiper-bundle.min.js"></script>
+<script src="../static/systemWeb_static/js/imagesloaded.pkgd.min.js"></script>
+<script src="../static/systemWeb_static/js/masonry.pkgd.min.js"></script>
+<script src="../static/systemWeb_static/js/script.js"></script>
+
+</body>
+
+</html>
